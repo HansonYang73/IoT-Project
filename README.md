@@ -1,6 +1,6 @@
 # IoT-Project
 
-## First time running the project
+## First time setting up the project
 
 1. 
 - Windows: python -m venv .venv 
@@ -13,5 +13,5 @@
 
 3. pip install -r requirements.txt
 
-## To run
+## To run you need to be on the Raspberry Pi
 Flask --app src/_\_init__.py run

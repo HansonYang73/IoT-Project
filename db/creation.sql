@@ -8,7 +8,7 @@ CREATE TABLE Customers (
     Number TEXT
 );
 
-CREATE TABLE Membership (
+CREATE TABLE Memberships (
     MembershipID INTEGER PRIMARY KEY AUTOINCREMENT,
     CustomerID INTEGER NOT NULL,
     FOREIGN KEY (CustomerID)
@@ -37,7 +37,7 @@ CREATE TABLE OrdersHistory (
     OrderHistoryID INTEGER PRIMARY KEY AUTOINCREMENT,
     MembershipID INTEGER NOT NULL,
     FOREIGN KEY (MembershipID)
-        REFERENCES Membership(MembershipID)
+        REFERENCES Memberships(MembershipID)
         ON DELETE CASCADE
 );
 

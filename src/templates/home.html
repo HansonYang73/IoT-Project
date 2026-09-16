@@ -13,7 +13,10 @@
         <h2>Add a customer</h2>
         <form action="{{ url_for('home.create') }}" method="POST">
             {{ add_form.csrf_token }}
-            {{ add_form.name.label }} {{ add_form.name(size=50) }}
+            {{ add_form.name.label }} {{ add_form.name(size=50) }} <br>
+            {{ add_form.address.label }} {{ add_form.address(size=50) }} <br>
+            {{ add_form.email.label }} {{ add_form.email(size=50) }} <br>
+            {{ add_form.phone_number.label }} {{ add_form.phone_number(size=50) }} <br>
             {{ add_form.submit() }}
         </form>
         
