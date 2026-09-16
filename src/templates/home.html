@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Home</title>
+    <head>
+    <body>    
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home.show') }}">Home</a></li>
+            </ul>
+        </nav>
+
+        <h2>Add a customer</h2>
+        <form action="{{ url_for('home.create') }}" method="POST">
+            {{ add_form.csrf_token }}
+            {{ add_form.name.label }} {{ add_form.name(size=50) }}
+            {{ add_form.submit() }}
+        </form>
+        
+    </body>
+</html>
